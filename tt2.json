@@ -1,0 +1,103 @@
+#an example of how to complete the current case fully
+
+#firs try
+MakePayment
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701046716,
+  "si": "bajUM5+KK5JaT4+RE3Kpgw==",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rVw6vK6X.2iyrizAadMUlgmJdAqS7nj",
+  "bid": 1177410106,
+  "tt": -1,
+  "sm": "100"
+}
+ResponseString
+{
+  "ti": 1701046716,
+  "sc": true,
+  "cd": 0,
+  "er": "",
+  "val": {
+    "tid": "20750047",
+    "dt": 1701046716
+  },
+  "si": "KKAp3P20Zf8wfd+qkOrzhA=="
+}
+
+#initiate tt:2
+MakePayment
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701046784,
+  "si": "8E7UgSAMWPR78U/9CvvjUw==",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rVw6xFFN.58HPBrXupaMVMvFw1uYIxn",
+  "bid": 1177410106,
+  "tt": 2,
+  "sm": "100"
+}
+ResponseString
+{
+  "ti": 1701046784,
+  "sc": true,
+  "cd": 0,
+  "er": "",
+  "val": {
+    "tid": "20750058",
+    "dt": 1701046784
+  },
+  "si": "xzYzZn25x6zP6A+sG8275Q=="
+}
+
+#repeat tt:2
+MakePayment
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701046807,
+  "si": "s91lFeETLiRYSQSxpY0b3Q==",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rVw83RVd.4Q0CJTgYGbq6RM947Ab7gj",
+  "bid": 1177410106,
+  "tt": 2,
+  "sm": "100"
+}
+ResponseString
+{
+  "ti": 1701046807,
+  "sc": false,
+  "cd": 12,
+  "er": "Transaction already exists",
+  "val": {
+    "tid": "20750058"
+  },
+  "si": "Sx8h+XLjQhFvVD4gw0zqBQ=="
+}
+
+GetPaymentInfo
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701046807,
+  "si": "hn4qzbwpJPcagqS9XvxN8w==",
+  "tid": "20750058",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rVw83RVd.4Q0CJTgYGbq6RM947Ab7gj"
+}
+{
+  "ti": 1701046807,
+  "sc": true,
+  "cd": 0,
+  "er": "",
+  "val": {
+    "dt": 1701046784,
+    "bid": 1177410106,
+    "tt": 2,
+    "uid": "2",
+    "sm": "100"
+  },
+  "si": "Cr6/dY5WzSmyhzrCgHxY7A=="
+}
