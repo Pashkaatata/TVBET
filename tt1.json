@@ -1,0 +1,76 @@
+#firs try
+MakePayment
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701048994,
+  "si": "ukmqaO3J2xiKRFkZlVaO7w==",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rW5WYnj3.59XxNc6kUGUFXSte2PSJAA",
+  "bid": 1177425827,
+  "tt": 1,
+  "sm": "201"
+}
+ResponseString
+{
+  "ti": 1701048995,
+  "sc": true,
+  "cd": 0,
+  "er": "",
+  "val": {
+    "tid": "20750760",
+    "dt": 1701048995
+  },
+  "si": "iFRCV6JKTWhFzKtSjtQ1Hw=="
+}
+
+#repeat tt:1
+MakePayment
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701049711,
+  "si": "NWe5q7jTBdhZ3DiljjDsfA==",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rWAAumuD.6vSEYJhrtuHnTu0copKHxa",
+  "bid": 1177425827,
+  "tt": 1,
+  "sm": "201"
+}
+ResponseString
+{
+  "ti": 1701049711,
+  "sc": false,
+  "cd": 12,
+  "er": "Transaction already exists",
+  "val": {
+    "tid": "20750760"
+  },
+  "si": "J/6q7TsRKXswyhjlfV8PoA=="
+}
+
+GetPaymentInfo
+PartnerApi https://betup.org/
+PartnerClientId 169
+RequestString
+{
+  "ti": 1701049711,
+  "si": "N/iK4vfdrWURtCNcf9oo/A==",
+  "tid": "20750760",
+  "to": "iC7sIgkq2.TCKyjCYLWYOt7qR9XYZfmVQMPYHfpeVhHX6rWAAumuD.6vSEYJhrtuHnTu0copKHxa"
+}
+ResponseString
+{
+  "ti": 1701049711,
+  "sc": true,
+  "cd": 0,
+  "er": "",
+  "val": {
+    "dt": 1701048995,
+    "bid": 1177425827,
+    "tt": 1,
+    "uid": "2",
+    "sm": "201"
+  },
+  "si": "VFrMXzOBZ6F4yIDn0EeAKg=="
+}
